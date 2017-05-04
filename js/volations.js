@@ -16,7 +16,7 @@ $(document).ready(function() {
         $('.loader').css({'display': 'block'});
       },
       type: "GET",
-      url: 'pages/'+$page+'.html', // указываем какую страницу загрузить
+      url: 'pages/'+$page+'.php', // указываем какую страницу загрузить
       data: dt, // передаем все значения data
       cache: false, // будем загружать без кеша
       success: function(html) { // данные отработаны, выводим на экран
@@ -43,12 +43,20 @@ $(document).ready(function() {
   $('.navigation ul li a').click(function() {
     ajaxload($(this).data());
   });
-
+/*
+Вызов функции ajaxload в загруженной таблице и странице просмотра события
+параметры передаются так же как и в меню
+На странице просмотра события нужно, для обновления страницы
+*/
+  $('#content_block').on('click', 'table tr, .update_page_btn', function(){
+    ajaxload($(this).data());
+  });
 
 
   $('.search').click(function(){
     $('.search_block').stop().slideToggle();
   });
+
 
 
 

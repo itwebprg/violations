@@ -53,7 +53,11 @@ $(document).ready(function() {
     uploadStr:'<i class="fa fa-file-archive-o fa-fw" aria-hidden="true"></i>  Дополнительные материалы'
   });
 
-
+	$(".fileuploader.nopretense").uploadFile({
+    url:"system/upload.php",
+    fileName:"myfile",
+    uploadStr:'<i class="fa fa-file-archive-o fa-fw" aria-hidden="true"></i> Нет претензий'
+  });
 
 
 });
