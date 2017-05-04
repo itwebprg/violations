@@ -1,9 +1,15 @@
+<!DOCTYPE html>
 <html>
 
 <head>
+  <meta charset="utf-8">
   <title>Система учета нарушений DIMEX</title>
   <link rel="stylesheet" type="text/css" href="css/volations.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.min.css">
+  <link rel="stylesheet" type="text/css" href="css/select2.css">
+
   <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
   <script type="text/javascript" src="js/volations.js"></script>
 </head>
@@ -11,14 +17,16 @@
 <body>
   <div class="D_start">
     <div class="left_block">
-      <div class="lg"><a href="#"><img src="images/logo.png" /></a></div>
+      <div class="lg">
+        <a href="#"><img src="images/logo.png" /></a>
+      </div>
       <div class="navigation">
         <ul>
-          <li><a href="#">Новое дело +</a></li>
-          <li><a href="#">Все</a></li>
-          <li><a href="#">Нарушение сохранности</a></li>
-          <li><a href="#">Утрата / Хищение</a></li>
-          <li><a href="#">Завершенные</a></li>
+          <li><a href="#" data-page="new_st"><i class="fa fa-plus fa-fw" aria-hidden="true"></i> Новое дело</a></li>
+          <li><a href="#" data-page="list"><i class="fa fa-globe fa-fw" aria-hidden="true"></i> Все</a></li>
+          <li><a href="#" data-page="list" data-type="1"><i class="fa fa-codepen fa-fw" aria-hidden="true"></i> Нарушение сохранности</a></li>
+          <li><a href="#" data-page="list" data-type="2"><i class="fa fa-shield fa-fw" aria-hidden="true"></i> Утрата / Хищение</a></li>
+          <li><a href="#" data-page="list" data-stat="6"><i class="fa fa-gavel fa-fw" aria-hidden="true"></i> Завершенные</a></li>
         </ul>
       </div>
     </div>
@@ -28,11 +36,72 @@
         <div class="user">Сотрудник: Иванов И.И.</div>
       </div>
       <div class="info">
-        <i class="fa fa-bell-o" aria-hidden="true"></i>
+        <a href="#" class="inform">
+          <i class="fa fa-bell-o" aria-hidden="true"></i>
+          <div class="matchinforms">50</div>
+        </a>
       </div>
+
+      <div class="info">
+        <a href="#" class="search">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </a>
+      </div>
+
     </div>
-    <div class="content_block"></div>
+
+<div class="search_block">
+<span>Поиск по базе, введите один или несколько параметров</span><br />
+<label><span>Номер</span><input type="text" name="num"  /></label>
+<label><span>Дата с</span><input type="text" name="dc" class="some_class" /></label>
+<label><span>Дата по</span><input type="text" name="dp" class="some_class" /></label>
+<label><span>Тип</span><select name="type">
+  <option value="0" disabled>Выберите</option>
+  <option value="1">Утрата / Хищение</option>
+  <option value="2">Нарушение сохранности</option>
+</select></label>
+<label><span>Офис</span><input type="text" name="oficce" /></label>
+<label><span>Накладная</span><input type="text" name="nackl" /></label>
+<label><span>Статус</span><select name="stsus">
+  <option value="0" disabled>Выберите</option>
+  <option value="1">Новое</option>
+  <option value="2">Готово к расследованию</option>
+  <option value="3">Расследование</option>
+  <option value="4">Предварительное заключение</option>
+  <option value="5">Закрыто по соглашению сторон</option>
+  <option value="6">Дорасследование</option>
+  <option value="7">Закрыто</option>
+</select></label>
+<button>Искать</button>
+</div>
+<div class="loader">
+<div class="cssload-body">
+		<span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+		</span>
+		<div class="cssload-base">
+				<span></span>
+				<div class="cssload-face"></div>
+		</div>
+</div>
+<div class="cssload-longfazers">
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+</div>
+</div>
+    <div class="animated fadeinDown" id="content_block">Загрузочный блок</div>
   </div>
+
+  <script src="js/jquery.datetimepicker.full.js"></script>
+  <script>
+$.datetimepicker.setLocale('ru');
+$('.some_class').datetimepicker();
+  </script>
 </body>
 
 </html>
