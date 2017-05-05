@@ -21,7 +21,7 @@ $(document).ready(function() {
   $(".fileuploader.trans_nacl").uploadFile({
     url:"system/upload.php",
     fileName:"myfile",
-    uploadStr:'<i class="fa fa-file-archive-o fa-fw" aria-hidden="true"></i>  Транспортная накладная'
+    uploadStr:'<i class="fa fa-file-archive-o fa-fw" aria-hidden="true"></i>  Транспортная накладная перевозчика'
   });
   $(".fileuploader.manifest").uploadFile({
     url:"system/upload.php",
@@ -58,6 +58,13 @@ $(document).ready(function() {
     fileName:"myfile",
     uploadStr:'<i class="fa fa-file-archive-o fa-fw" aria-hidden="true"></i> Нет претензий'
   });
+
+	$(".fileuploader.ur_doc").uploadFile({
+    url:"system/upload.php",
+    fileName:"myfile",
+    uploadStr:'<i class="fa fa-file-archive-o fa-fw" aria-hidden="true"></i> Документы'
+  });
+
 
 
 });

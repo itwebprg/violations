@@ -69,7 +69,7 @@
             dragDropHoverClass: "state-hover",
             errorClass: "ajax-file-upload-error",
             uploadButtonClass: "ajax-file-upload",
-            dragDropStr: "<br /><span><b>Перемести или выбери файл</b></span>",
+            dragDropStr: "<div class='drop_file'><i class='fa fa-camera' aria-hidden='true'></i><br /><span><b>Перемести или выбери файл</b></span></div>",
             uploadStr:"Загрузить",
             abortStr: "Сбросить",
             cancelStr: "Отмена",

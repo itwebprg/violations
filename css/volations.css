@@ -40,8 +40,13 @@ pre{background: #9e9e9e;
 
 section{border-bottom: 2px solid #0e3f96;
     overflow: hidden;
-    margin-bottom: 10px;}
+    }
 
+
+.go_back{    float: left;
+    font-size: 30px;
+    padding: 3px 15px;
+    border-right: 2px solid;}
 .left_block .lg {
   padding: 10px 10px 20px;
 }
@@ -78,6 +83,10 @@ section{border-bottom: 2px solid #0e3f96;
 .left_block .navigation ul li:hover a {
   color: #ffffff;
 }
+
+.bottom_btn{    position: absolute;
+    bottom: 0;}
+.bottom_btn button{    margin: 2px 3px;}
 
 .top_block {
   width: 100%;
@@ -291,6 +300,11 @@ table.list th {
   border-bottom: 2px solid #0e4096;
   margin-bottom: 10px;
 }
+.head2{    background: #0e3f96;
+    color: #fff;
+    padding: 3px 0px;
+    margin-bottom: 12px;}
+.head2 .title_page{color: #fff; font-size: 30px;}
 
 .title_page {
   font-size: 35px;
@@ -403,6 +417,24 @@ table.list th {
 .pdf{color: #e50004;}
 .ofter{color: #000;}
 
+
+
+.vp_ot{    width: 100%;
+    min-height: 100px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 3px;
+    box-shadow: 0px 0px 5px #0e4097;}
+.cold-2 select {    border: 1px solid #999;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 3px;
+    box-shadow: 0px 0px 5px #0e4097;
+    width: 100%;}
+
+
+.select2-container{width: 100%!important;}
 /* upload file */
 
 .ajax-file-upload-statusbar {
@@ -541,6 +573,7 @@ margin: 5px 10px 5px 0px;
 	text-align:left;
 	vertical-align:middle;
 	padding:10px 10px 0px 10px;
+  overflow: hidden;
 }
 
 .state-hover
@@ -553,6 +586,11 @@ margin: 5px 10px 5px 0px;
 }
 
 
+
+.drop_file{    float: right;
+    text-align: center;
+    margin-right: 30px;}
+.drop_file i{font-size: 130px;}
 /* loader ajax*/
 
 .cssload-body {

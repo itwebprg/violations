@@ -57,7 +57,10 @@ $(document).ready(function() {
     $('.search_block').stop().slideToggle();
   });
 
+$('.top').click(function(){
+  $('body, html').stop().animate({scrollTop:0}, 500);
 
+});
 
 
 
